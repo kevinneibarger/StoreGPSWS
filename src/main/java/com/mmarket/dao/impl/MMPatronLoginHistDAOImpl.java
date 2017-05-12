@@ -86,4 +86,44 @@ public class MMPatronLoginHistDAOImpl extends CustomHibernateDaoSupport implemen
 		return patrons;
 	}
 
+	@Override
+	public int updatePatronById(long patronId, Date lastLoginDate) {
+		HibernateTemplate template = new HibernateTemplate(this.sessionFactory);
+		
+		MMPatronLoginHistory patron = getPatronLoginHistByPatronId(patronId);
+		
+		if (patron != null) {
+			patron.setLastLoginDate(lastLoginDate);
+			template.update(patron);
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+
+	@Override
+	public int addPatronLoginHist(long patronId, Date lastLoginDate) {
+		MMPatronLoginHistory patron = new MMPatronLoginHistory();
+		patron.setPatronId(patronId);
+		patron.setLastLoginDate(lastLoginDate);
+		
+		HibernateTemplate template = new HibernateTemplate(this.sessionFactory);
+		template.saveOrUpdate(patron);
+		
+		// Check and make sure it was added!
+		MMPatronLoginHistory newPatron =  getPatronLoginHistByPatronId(patronId);
+		
+		if (newPatron != null) {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+
+	@Override
+	public int deleteLoginHistByPatronId(long patronId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

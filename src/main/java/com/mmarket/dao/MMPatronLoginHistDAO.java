@@ -18,4 +18,7 @@ public interface MMPatronLoginHistDAO {
 	public MMPatronLoginHistory getPatronLoginHistByPatronId(long patronId);
 	public MMPatronLoginHistory getPatronLoginHistByHistId(long histId);
 	public List<MMPatronLoginHistory> getPatronLoginHistByDateRange(Date startDate, Date endDate);
+	public int updatePatronById(long patronId, Date lastLoginDate);
+	public int addPatronLoginHist(long patronId, Date lastLoginDate);
+	public int deleteLoginHistByPatronId(long patronId);
 }

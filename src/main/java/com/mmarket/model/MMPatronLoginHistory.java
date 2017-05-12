@@ -18,7 +18,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="mm_patron_login_hist")
+@Table(name="TBL_PATRON_LOGIN_HIST")
 public class MMPatronLoginHistory {
 
 
@@ -46,7 +46,7 @@ public class MMPatronLoginHistory {
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "LOGIN_HIST_ID", unique = true, nullable = false)
+	@Column(name = "HIST_ID", unique = true, nullable = false)
 	public long getHistId() {
 		return histId;
 	}

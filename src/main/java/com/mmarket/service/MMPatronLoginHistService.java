@@ -42,4 +42,19 @@ public class MMPatronLoginHistService {
 	public List<MMPatronLoginHistory> getPatronLoginHistByDateRange(Date startDate, Date endDate) {
 		return patronLoginHistDAO.getPatronLoginHistByDateRange(startDate, endDate);
 	}
+	
+	@Transactional
+	public int updatePatronById(long patronId, Date lastLoginDate) {
+		return patronLoginHistDAO.updatePatronById(patronId, lastLoginDate);
+	}
+	
+	@Transactional
+	public int addPatronLoginHist(long patronId, Date lastLoginDate) {
+		return patronLoginHistDAO.addPatronLoginHist(patronId, lastLoginDate);
+	}
+	
+	@Transactional
+	public int deleteLoginHistByPatronId(long patronId) {
+		return patronLoginHistDAO.deleteLoginHistByPatronId(patronId);
+	}
 }
