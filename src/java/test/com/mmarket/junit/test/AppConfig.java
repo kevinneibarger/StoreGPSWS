@@ -26,7 +26,7 @@ import com.mmarket.service.MMarketManViewTableService;
 //@ComponentScan(basePackages={"com.mmarket.service, com.mmarket.dao, com.mmarket.dao.impl"})
 //@ImportResource("classpath:*/spring-servlet.xml")
 @Configuration 
-@EnableTransactionManagement
+@EnableTransactionManagement 
 public class AppConfig {
 // NOTE: UNCOMMENT Below to run JUNIT Tests	
 //	@Bean  

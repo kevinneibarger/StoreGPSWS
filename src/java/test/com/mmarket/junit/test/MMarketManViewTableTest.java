@@ -27,7 +27,7 @@ import com.mmarket.service.MMarketManViewTableService;
 // NOTE: UNCOMMENT Code in The AppConfig class before running test!
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppConfig.class)
-@Transactional
+@Transactional 
 public class MMarketManViewTableTest {
 
     @Autowired

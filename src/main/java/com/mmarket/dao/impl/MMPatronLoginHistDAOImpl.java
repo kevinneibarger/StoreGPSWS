@@ -23,7 +23,7 @@ import com.mmarket.model.MMarketPatronLoginHistTable;
 @Repository
 public class MMPatronLoginHistDAOImpl implements MMPatronLoginHistDAO {
 	
-	@Autowired
+	@Autowired 
 	private SessionFactory sessionFactory;
 	
 	/* (non-Javadoc)

@@ -18,7 +18,7 @@ import javax.persistence.OneToOne;
  * @author kevin
  *
  */
-public class MMarketAttendedTable implements Serializable {
+public class MMarketAttendedTable implements Serializable { 
 
 	private static final long serialVersionUID = 1L;
 	

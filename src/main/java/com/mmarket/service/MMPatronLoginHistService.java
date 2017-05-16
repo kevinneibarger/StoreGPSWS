@@ -19,7 +19,7 @@ import com.mmarket.model.MMarketPatronLoginHistTable;
  */
 @Service("mmPatronLoginHistService")
 public class MMPatronLoginHistService {
-	
+	 
 	@Autowired
 	MMPatronLoginHistDAOImpl patronLoginHistDAO;
 	

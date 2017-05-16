@@ -20,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="TBL_PATRON_LOGIN_HIST")
-public class MMarketPatronLoginHistTable implements Serializable {
+public class MMarketPatronLoginHistTable implements Serializable { 
 
 	private static final long serialVersionUID = 1L;
 

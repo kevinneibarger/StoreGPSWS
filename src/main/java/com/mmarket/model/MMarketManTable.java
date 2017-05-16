@@ -20,7 +20,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="TBL_MAN")
-public class MMarketManTable implements Serializable {
+public class MMarketManTable implements Serializable { 
 
 	private static final long serialVersionUID = 1L;
 

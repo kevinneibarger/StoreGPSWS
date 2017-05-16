@@ -17,7 +17,7 @@ import javax.persistence.OneToOne;
  * @author kevin
  *
  */
-public class MMarketSearchHistTable implements Serializable {
+public class MMarketSearchHistTable implements Serializable { 
 
 	private static final long serialVersionUID = 1L;
 

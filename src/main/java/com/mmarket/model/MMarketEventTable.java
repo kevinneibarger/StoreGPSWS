@@ -21,7 +21,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="TBL_EVENT")
-public class MMarketEventTable implements Serializable {
+public class MMarketEventTable implements Serializable { 
 
 	private static final long serialVersionUID = 1L;
 	
