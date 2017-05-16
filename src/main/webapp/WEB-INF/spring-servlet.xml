@@ -31,6 +31,8 @@
 				<beans:value>com.mmarket.model.MMarketManTable</beans:value>
 				<beans:value>com.mmarket.model.MMarketManViewTable</beans:value>
 				<beans:value>com.mmarket.model.MMarketPatronTable</beans:value>
+				<beans:value>com.mmarket.model.MMarketSearchHistTable</beans:value>
+				<beans:value>com.mmarket.model.MMarketAttendedTable</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">

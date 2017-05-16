@@ -43,7 +43,7 @@ public class MMPatronLoginHistDAOImpl implements MMPatronLoginHistDAO {
 	@Override
 	public MMarketPatronLoginHistTable getPatronLoginHistByPatronId(long patronId) {
 		HibernateTemplate template = new HibernateTemplate(this.sessionFactory);
-		List patrons = template.find("from MMPatronLoginHistory where patronId=?", patronId);
+		List patrons = template.find("from MMarketPatronLoginHistTable where patronId=?", patronId);
 		MMarketPatronLoginHistTable patron = new MMarketPatronLoginHistTable();
 		
 		if (patrons != null && patrons.size() > 0) {
@@ -61,7 +61,7 @@ public class MMPatronLoginHistDAOImpl implements MMPatronLoginHistDAO {
 	public MMarketPatronLoginHistTable getPatronLoginHistByHistId(long histId) {
 		HibernateTemplate template = new HibernateTemplate(this.sessionFactory);
 		
-		List patrons = template.find("from MMPatronLoginHistory where histId = ?", histId);
+		List patrons = template.find("from MMarketPatronLoginHistTable where histId = ?", histId);
 		MMarketPatronLoginHistTable patron = new MMarketPatronLoginHistTable();
 		
 		if (patrons != null && patrons.size() > 0) {

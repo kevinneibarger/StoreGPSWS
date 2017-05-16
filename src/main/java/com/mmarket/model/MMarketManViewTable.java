@@ -5,6 +5,7 @@ package com.mmarket.model;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -22,7 +23,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="TBL_MAN_VIEW")
-public class MMarketManViewTable {
+public class MMarketManViewTable implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private long viewId;
 	private long manId; // foreign key
