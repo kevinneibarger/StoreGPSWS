@@ -75,7 +75,7 @@ public class MMPatronLoginHistDAOImpl implements MMPatronLoginHistDAO {
 	 * @see com.mmarket.dao.MMPatronLoginHistDAO#getPatronLoginHistByDateRange(java.sql.Date, java.sql.Date)
 	 */
 	@SuppressWarnings("unchecked")
-	@Override
+	@Override 
 	public List<MMarketPatronLoginHistTable> getPatronLoginHistByDateRange(Date startDate, Date endDate) {
 		DetachedCriteria criteria = DetachedCriteria.forClass(MMarketPatronLoginHistTable.class);
 		criteria.add(Restrictions.between("lastLoginDate", startDate, endDate));
