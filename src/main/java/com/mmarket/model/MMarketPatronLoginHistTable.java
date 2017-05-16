@@ -19,7 +19,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="TBL_PATRON_LOGIN_HIST")
-public class MMPatronLoginHistory {
+public class MMarketPatronLoginHistTable {
 
 
 	private long histId;

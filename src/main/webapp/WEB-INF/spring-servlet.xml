@@ -26,7 +26,11 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>com.mmarket.model.MMPatronLoginHistory</beans:value>
+				<beans:value>com.mmarket.model.MMarketEventTable</beans:value>
+				<beans:value>com.mmarket.model.MMarketPatronLoginHistTable</beans:value>
+				<beans:value>com.mmarket.model.MMarketManTable</beans:value>
+				<beans:value>com.mmarket.model.MMarketManViewTable</beans:value>
+				<beans:value>com.mmarket.model.MMarketPatronTable</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">

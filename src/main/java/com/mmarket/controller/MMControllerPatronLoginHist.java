@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mmarket.model.MMPatronLoginHistory;
+import com.mmarket.model.MMarketManViewTable;
+import com.mmarket.model.MMarketPatronLoginHistTable;
 import com.mmarket.service.MMPatronLoginHistService;
+import com.mmarket.service.MMarketManViewTableService;
 
 /**
  * @author kevin
@@ -24,36 +26,36 @@ import com.mmarket.service.MMPatronLoginHistService;
 
 @CrossOrigin(origins = "*", allowCredentials = "true", allowedHeaders = "*")
 @RestController
-public class MMarketController { 
+public class MMControllerPatronLoginHist { 
 
 	@Autowired
 	MMPatronLoginHistService patronLoginHistService;
 	
 	@RequestMapping(value = "/getAllPatronLoginHist", method = RequestMethod.GET, headers = "Accept=application/json")
-	public List<MMPatronLoginHistory> getAllPatronLoginHist() {
+	public List<MMarketPatronLoginHistTable> getAllPatronLoginHist() {
 		
-		List<MMPatronLoginHistory> allPatrons = patronLoginHistService.getAllPatronLoginHist();
+		List<MMarketPatronLoginHistTable> allPatrons = patronLoginHistService.getAllPatronLoginHist();
 		return allPatrons;
 	}
 	
 	@RequestMapping(value = "/getPatronLoginHistByPatronId/{patronId}", method = RequestMethod.GET, headers = "Accept=application/json")
-	public MMPatronLoginHistory getPatronLoginHistByPatronId(@PathVariable long patronId) {
+	public MMarketPatronLoginHistTable getPatronLoginHistByPatronId(@PathVariable long patronId) {
 		
-		MMPatronLoginHistory patron = patronLoginHistService.getPatronLoginHistByPatronId(patronId);
+		MMarketPatronLoginHistTable patron = patronLoginHistService.getPatronLoginHistByPatronId(patronId);
 		return patron;
 	}
 	
 	@RequestMapping(value = "/getPatronLoginHistByHistId/{histId}", method = RequestMethod.GET, headers = "Accept=application/json")
-	public MMPatronLoginHistory getPatronLoginHistByHistId(@PathVariable long histId) {
+	public MMarketPatronLoginHistTable getPatronLoginHistByHistId(@PathVariable long histId) {
 		
-		MMPatronLoginHistory patron = patronLoginHistService.getPatronLoginHistByHistId(histId);
+		MMarketPatronLoginHistTable patron = patronLoginHistService.getPatronLoginHistByHistId(histId);
 		return patron;
 	}
 	
 	@RequestMapping(value = "/getPatronLoginHistByDateRange/{startDate}/{endDate}", method = RequestMethod.GET, headers = "Accept=application/json")
-	public List<MMPatronLoginHistory> getPatronLoginHistByDateRange(@PathVariable("startDate") Date startDate, @PathVariable("endDate") Date endDate) {
+	public List<MMarketPatronLoginHistTable> getPatronLoginHistByDateRange(@PathVariable("startDate") Date startDate, @PathVariable("endDate") Date endDate) {
 		
-		List<MMPatronLoginHistory> allPatrons = patronLoginHistService.getPatronLoginHistByDateRange(startDate, endDate);
+		List<MMarketPatronLoginHistTable> allPatrons = patronLoginHistService.getPatronLoginHistByDateRange(startDate, endDate);
 		return allPatrons;
 	}
 	
@@ -80,4 +82,5 @@ public class MMarketController {
 			return "Patron with ID: "+patronId+" Was NOT ADDED, an error hath occurreth!";
 		}
 	}
+
 }
