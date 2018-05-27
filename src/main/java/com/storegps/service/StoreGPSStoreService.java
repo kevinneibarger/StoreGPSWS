@@ -27,4 +27,14 @@ public class StoreGPSStoreService {
 	public List<Store> getAllStores() {
 		return storeGPSDAOImpl.getAllStores();
 	}
+
+	@Transactional
+	public Store getStoreById(long storeId) {
+		return storeGPSDAOImpl.getStoreById(storeId);
+	}
+
+	@Transactional
+	public List<Store> getStoresByType(String storeType) {
+		return storeGPSDAOImpl.getStoresByType(storeType);
+	}
 }

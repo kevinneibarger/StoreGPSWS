@@ -8,19 +8,23 @@ import static javax.persistence.GenerationType.IDENTITY;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author kevin
  *
  */
+@Entity
+@Table(name = "product_image")
 public class ProductImage implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	private long productImageId;
-	private String productImage;
+	private byte[] productImage;
 	private long productId; // Foreign Key
 
 	@Id
@@ -35,11 +39,11 @@ public class ProductImage implements Serializable {
 	}
 
 	@Column(name = "PRODUCT_IMAGE", columnDefinition = "LONGBLOB", unique = true, nullable = false)
-	public String getProductImage() {
+	public byte[] getProductImage() {
 		return productImage;
 	}
 
-	public void setProductImage(String productImage) {
+	public void setProductImage(byte[] productImage) {
 		this.productImage = productImage;
 	}
 

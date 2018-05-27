@@ -17,4 +17,6 @@ public interface StoreGPSStoreDAO {
 
 	public Store getStoreById(long storeId);
 
+	public List<Store> getStoresByType(String storeType);
+
 }

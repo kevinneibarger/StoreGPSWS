@@ -41,4 +41,11 @@ public class StoreGPSStoreDAOImpl implements StoreGPSStoreDAO {
 		return store;
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Store> getStoresByType(String storeType) {
+		HibernateTemplate template = new HibernateTemplate(this.sessionFactory);
+		return (List<Store>) template.find("from Store where storeType=?", storeType);
+	}
+
 }
