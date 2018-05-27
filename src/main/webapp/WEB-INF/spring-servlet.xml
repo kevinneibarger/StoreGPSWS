@@ -15,7 +15,7 @@
 		destroy-method="close">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<beans:property name="url"
-			value="jdbc:mysql://localhost:3306/mmarket_db" />
+			value="jdbc:mysql://localhost:3306/store_gps" />
 		<beans:property name="username" value="root" />
 		<beans:property name="password" value="" />
 	</beans:bean>
@@ -26,13 +26,10 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>com.mmarket.model.MMarketEventTable</beans:value>
-				<beans:value>com.mmarket.model.MMarketPatronLoginHistTable</beans:value>
-				<beans:value>com.mmarket.model.MMarketManTable</beans:value>
-				<beans:value>com.mmarket.model.MMarketManViewTable</beans:value>
-				<beans:value>com.mmarket.model.MMarketPatronTable</beans:value>
-				<beans:value>com.mmarket.model.MMarketSearchHistTable</beans:value>
-				<beans:value>com.mmarket.model.MMarketAttendedTable</beans:value>
+				<beans:value>com.storegps.model.Products</beans:value>
+				<beans:value>com.storegps.model.ProductImage</beans:value>
+				<beans:value>com.storegps.model.ProductLocation</beans:value>
+				<beans:value>com.storegps.model.Store</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -44,7 +41,7 @@
 		</beans:property>
 	</beans:bean>
 
-	<context:component-scan base-package="com.mmarket.*" />
+	<context:component-scan base-package="com.storegps.*" />
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	
